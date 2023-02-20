@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <div>
       <div className={styles.menu}>
-        {/* <MainHeader /> */}
         <nav style={{ position: 'fixed', top: '18px', left: '80rem' }}>
           <ul>
             <li>Users</li>

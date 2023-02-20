@@ -14,14 +14,10 @@ const Login = (props) => {
   }, [userEmail, userPassword]);
   const handleEmail = (e) => {
     setUserEmail(e.target.value);
-    // setFormValid(
-    //   e.target.value.includes('@') && userPassword.trim().length > 6
-    // );
   };
 
   const handlePassword = (e) => {
     setUserPassword(e.target.value);
-    // setFormValid(e.target.trim().length > 6 && userEmail.includes('@'));
   };
 
   const validEmailHandler = () => {

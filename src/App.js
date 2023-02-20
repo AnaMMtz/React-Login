@@ -1,11 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import Home from 'components/Home';
 import Login from 'components/Login';
 import MainHeader from 'components/MainHeader';
-import React, { useEffect, useState } from 'react';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [userLogin, setUserLogin] = useState([]);
 
   useEffect(() => {
     const storedUserLoginInfo = localStorage.getItem('isLoggedIn');
@@ -25,19 +24,9 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  // const addUserHandler = (email, password) => {
-  //   setUserLogin((prevUser) => {
-  //     return [{ userEmail: email, userPassword: password }];
-  //   });
-  // };
-
   return (
     <>
-      <MainHeader
-        // info={userLogin}
-        isAuthenticated={isLoggedIn}
-        onLogout={logoutHandler}
-      />
+      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
       <main>
         {!isLoggedIn && <Login onAddInfo={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
