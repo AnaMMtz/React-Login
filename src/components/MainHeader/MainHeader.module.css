@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #8326b9;
+  height: 6rem;
+}
+
+.title {
+  color: white;
+  margin: auto 4rem;
+}
