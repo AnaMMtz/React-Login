@@ -1,6 +1,12 @@
-import React, { useEffect, useReducer, useRef, useState } from 'react';
+import React, {
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+  useContext,
+} from 'react';
 import styles from './Login.module.css';
-import Home from 'components/Home';
+import AuthContext from 'components/context/auth-context';
 
 const emailReducer = (state, action) => {
   if (action.type === 'USER_EMAIL') {
@@ -27,6 +33,7 @@ const passwordReducer = (state, action) => {
 };
 
 const Login = (props) => {
+  const authCtx = useContext(AuthContext);
   const [formValid, setFormValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
@@ -72,7 +79,7 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.onAddInfo(emailState.value, passwordState.value);
+    authCtx.onLogin(emailState.value, passwordState.value);
   };
 
   return (

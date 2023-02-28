@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 22rem;
+  width: 100%;
 }
 
 .menu nav {
@@ -21,6 +21,10 @@
   font-weight: bold;
 }
 
+.menu a {
+  text-decoration: none;
+  color: white;
+}
 .menu button {
   background-color: #e859dd;
   border-radius: 18px;
@@ -31,4 +35,12 @@
   color: white;
   border: none;
   font-weight: bold;
+}
+
+.welcome {
+  margin: 6rem auto;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 9rem;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 25%);
 }

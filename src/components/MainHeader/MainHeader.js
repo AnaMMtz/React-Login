@@ -6,7 +6,6 @@ const MainHeader = (props) => {
   return (
     <div className={styles.header}>
       <h1 className={styles.title}>A Typical Page</h1>
-      {/* <Home /> */}
     </div>
   );
 };
